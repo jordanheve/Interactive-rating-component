@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medimum-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+    
+}
+
+.rating-state, .thankyou-state {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background: linear-gradient(var(--dark-blue) -50%, var(--very-dark-blue) 200%);
+    padding: 1rem 1.5rem;
+    height: 24rem;
+    width: 24rem;
+    border-radius: 1rem;
+}
+
+.thankyou-state {
+    display: none;
+    text-align: center;
+    align-items: center;
+}
+
+.thankyou-state-img {
+    height: 7rem;
+    width: 10rem;    
+}
+
+.thankyou-state-result{
+    color: var(--orange);
+    background-color: var(--dark-blue);
+    padding: 0.5rem 0.8rem;
+    border-radius: 2rem;
+}
+
+.rating-state-icon-container, .rating-state-number {
+    background-color: var(--dark-blue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    color: var(--medimum-grey);
+    border: none;
+    font-weight: 700;
+}
+
+.rating-state-number:hover {
+    background-color: var(--medimum-grey);
+    color:var(--white);
+    cursor: pointer;
+}
+.rating-state-number:focus {
+    background-color: var(--orange);
+    color: var(--white)
+}
+
+.rating-state-title, .thankyou-state-title {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.rating-state-paragraph, .thankyou-state-paragraph {
+    color: var(--medimum-grey);
+    line-height: 1.4rem;
+}
+
+.submit-btn {
+    background-color: var(--orange);
+    border: none;
+    padding: 0.9rem;
+    color: var(--white);
+    border-radius: 1.8rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.submit-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+.rating-state-number-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+button {
+    transition: all .2s ease-in-out;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: .9rem;
+    color:var(--light-grey);
+}
+
+.attribution a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color:var(--white);
+}
+ 
+@media (max-height: 500px) {
+    .attribution {
+        position: unset;
+        margin-top: 1rem;
+    }
+}
